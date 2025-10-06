@@ -1,23 +1,19 @@
 Package: nose
 Type: Package
-Title: nose Package for R
-Version: 1.0
-Date: 2012-12-04
-Author: originally written by Subbiah M <sisufive@gmail.com> packaged
-        by Sumathi R with considerable contributions by Srinivasan M R
-Maintainer: Sumathi R <sumathimr@yahoo.co.in>
-Description: The nose package consists of a collection of three
-        functions for classifying sparseness in typical 2 x 2 data sets
-        with at least one cell should have zero count. These functions
-        are based on the three widely applied summary measures for 2 x
-        2 categorical data viz, Risk Difference (RD), Relative Risk
-        (RR), Odds Ratio (OR). This package helps to identify suitable
-        continuity correction for zero cells when a multi centre
-        analysis or a meta analysis is carried out. Further, it can be
-        considered as a tool for sensitivity analysis for adding a
-        continuity correction and to identify the presence of Simpson's
-        paradox.
+Title: Classification of Sparseness in 2-by-2 Categorical Data
+Version: 1.0.5
+Date: 2025-09-29
+Authors@R: 
+    person(given = "Subbiah", family = "M", 
+           email = "sisufive@gmail.com", 
+           role = c("aut", "cre"))
+Maintainer: Subbiah M <sisufive@gmail.com>
+Description: Provides functions for classifying sparseness in 2 x 2 categorical data where one or more cells have zero counts. The classification uses three widely applied summary measures: Risk Difference (RD), Relative Risk (RR), and Odds Ratio (OR). Helps in selecting suitable continuity corrections for zero cells in multi-centre or meta-analysis studies. Also supports sensitivity analysis and can detect phenomena such as Simpson's paradox. The methodology is based on Subbiah and Srinivasan (2008) <doi:10.1016/j.spl.2008.06.023>.
 License: GPL-2
-Packaged: 2012-12-04 06:41:53 UTC; Administrator
+Encoding: UTF-8
+RoxygenNote: 7.3.1
+NeedsCompilation: no
+Packaged: 2025-09-28 23:45:33 UTC; admin
+Author: Subbiah M [aut, cre]
 Repository: CRAN
-Date/Publication: 2012-12-19 11:39:43
+Date/Publication: 2025-10-06 05:40:02 UTC

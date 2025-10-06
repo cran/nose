@@ -1,4 +1,28 @@
-nose.rf <-
+#' Classify Sparseness in 2x2 Tables using Risk Difference
+#'
+#' Classifies sparseness in 2x2 categorical tables where one or more cells are zero.
+#' The classification uses widely applied summary measures and a continuity correction
+#' to determine whether a table exhibits mild, moderate, or severe sparseness.
+#'
+#' @param nos A numeric matrix or data.frame with 4 columns representing counts
+#'   in a 2x2 table: a (top-left), b (top-right), c (bottom-left), d (bottom-right).
+#'   Each row corresponds to a separate 2x2 table.
+#' @param cc Continuity correction factor (numeric, e.g., 0.3)
+#' @return A matrix combining the input counts with an extra column indicating the
+#'   sparseness classification for each table.
+#' @examples
+#' # Simple example: one 2x2 table with a zero cell
+#' xx <- matrix(c(0, 3, 2, 5), nrow = 1, byrow = TRUE)
+#' nose.rd(xx, cc = 0.3)
+#'
+#' # Multiple tables example: each row is a separate 2x2 table
+#' tables <- matrix(c(
+#'   0, 3, 2, 5,
+#'   2, 0, 1, 4,
+#'   0, 0, 2, 3
+#' ), nrow = 3, byrow = TRUE)
+#' nose.rd(tables, cc = 0.3)
+nose.rd <-
 function(nos,cc)
 {
 tcol=ncol(nos)
